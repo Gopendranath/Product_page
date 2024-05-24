@@ -4,13 +4,13 @@ var swiper = new Swiper(".mySwiper", {
 		prevEl: ".swiper-prev-button"
 	},
 	effect: "fade",
-	loop: "infinite",
+	loop: true,
 	pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        }
+		el: ".swiper-pagination",
+		type: "fraction",
+	}
 });
 
 swiper.on('slideChange', function(sld) {
 	document.body.setAttribute('data-sld', sld.realIndex);
-})
+});
